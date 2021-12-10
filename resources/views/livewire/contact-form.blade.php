@@ -58,8 +58,8 @@
                 <form wire:submit.prevent="submitForm" action="/contact" method="POST" class="grid grid-cols-1 row-gap-6">
                     @csrf
 
-                    {{-- @if ($successMessage) --}}
-                    <div class="rounded-md bg-green-50 p-4 mt-8">
+                    @if ($successMessage)
+                    <div class="rounded-md bg-green-100 p-4 mt-8">
                         <div class="flex">
                             <div class="flex-shrink-0">
                                 <svg class="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor">
@@ -70,7 +70,7 @@
                             </div>
                             <div class="ml-3">
                                 <p class="text-sm leading-5 font-medium text-green-800">
-                                    {{-- {{ $successMessage }} --}}
+                                    {{ $successMessage }}
                                 </p>
                             </div>
                             <div class="ml-auto pl-3">
@@ -90,7 +90,7 @@
                             </div>
                         </div>
                     </div>
-                    {{-- @endif --}}
+                    @endif
 
                     <div>
                         <label for="name" class="sr-only">Full name</label>
