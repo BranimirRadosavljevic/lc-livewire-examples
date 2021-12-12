@@ -45,7 +45,7 @@
                                 </div>
                             </a>
                         </li>
-                    @empty
+                    @empty 
                         <li class="px-4 py-4">No results found for "{{ $search }}"</li>
                     @endforelse
 
